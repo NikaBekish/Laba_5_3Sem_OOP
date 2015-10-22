@@ -7,6 +7,9 @@ public:
 
 	IstController();
 	
+	void interactiveElementNum() const;
+	void textBoxNum() const;
+
 	virtual ~IstController();
 
 protected:

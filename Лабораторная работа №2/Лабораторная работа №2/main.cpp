@@ -62,10 +62,22 @@ int main()
 	Button b1,b2;
 	TextBox t1, t2;
 	IST i1;
+	IstController c;
 	i1.addList(&b1);
 	i1.addList(&b2);
 	i1.addList(&t1);
 	i1.addList(&t2);
+	IST::show();
+	c.interactiveElementNum();
+	c.textBoxNum();
+	i1.delList();
+	IST::show();
+	i1.delList();
+	i1.delList();
+	IST::show();
+	i1.delList();
+	IST::show();
+	i1.delList();
 	IST::show();
 	return 0;
 }

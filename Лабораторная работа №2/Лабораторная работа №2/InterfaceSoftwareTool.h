@@ -15,6 +15,7 @@ public:
 
 	static void show();
 	void addList(ControlElement *);
+	void delList();
 
 private:
 	ControlElement * adress;

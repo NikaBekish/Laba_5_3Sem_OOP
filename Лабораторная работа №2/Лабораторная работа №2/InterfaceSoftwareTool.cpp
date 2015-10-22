@@ -4,8 +4,6 @@
 
 using namespace std;
 //загоняем в список адреса
-//надо в getType() реализовать получение типа
-//посмотреть или можно virtual static в контроллере
 void IST::show()
 {
 	IST *p = (IST*)head;
@@ -47,6 +45,29 @@ void IST::addList(ControlElement * adr)//ControlElement
 			}
 			q->next = obj;
 			obj->next = NULL;
+		}
+	}
+}
+
+void IST::delList()
+{
+	if (head)
+	{
+		IstController *q = head, *t;
+		if (q->next!=NULL)
+		{
+			while (q->next!=NULL)
+			{
+				t = q;
+				q = q->next;
+			}
+			delete q;
+			t->next = NULL;
+		}
+		else
+		{
+			delete q;
+			head = NULL;
 		}
 	}
 }
