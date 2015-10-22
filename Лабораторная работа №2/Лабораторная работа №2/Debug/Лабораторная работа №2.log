@@ -1,0 +1,24 @@
+﻿Сборка начата 22.10.2015 7:11:58.
+     1>Проект "D:\Универ\Работы\Visual Studio\2 курс\Git5\Лабораторная работа №2\Лабораторная работа №2\Лабораторная работа №2.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Универ\Работы\Visual Studio\2 курс\Git5\Лабораторная работа №2\Debug\Лабораторная работа №2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Универ\Работы\Visual Studio\2 курс\Git5\Лабораторная работа №2\Debug\Лабораторная работа №2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Универ\Работы\Visual Studio\2 курс\Git5\Лабораторная работа №2\Debug\Лабораторная работа №2.lib" /MACHINE:X86 Debug\button.obj
+         Debug\controlElement.obj
+         Debug\controlElementEmp.obj
+         Debug\figure.obj
+         Debug\InterfaceSoftwareTool.obj
+         Debug\istController.obj
+         Debug\main.obj
+         Debug\rectangle.obj
+         Debug\textBox.obj
+         Debug\viewer.obj
+         Debug\window.obj
+     1>InterfaceSoftwareTool.obj : error LNK2001: неразрешенный внешний символ ""public: virtual void __thiscall IST::setList(void)" (?setList@IST@@UAEXXZ)"
+     1>InterfaceSoftwareTool.obj : error LNK2001: неразрешенный внешний символ ""public: virtual void __thiscall IST::getList(void)const " (?getList@IST@@UBEXXZ)"
+     1>InterfaceSoftwareTool.obj : error LNK2001: неразрешенный внешний символ ""public: virtual void __thiscall IST::getType(void)const " (?getType@IST@@UBEXXZ)"
+     1>InterfaceSoftwareTool.obj : error LNK2001: неразрешенный внешний символ ""protected: static class IstController * IstController::head" (?head@IstController@@1PAV1@A)"
+     1>D:\Универ\Работы\Visual Studio\2 курс\Git5\Лабораторная работа №2\Debug\Лабораторная работа №2.exe : fatal error LNK1120: неразрешенных внешних элементов: 4
+     1>Сборка проекта "D:\Универ\Работы\Visual Studio\2 курс\Git5\Лабораторная работа №2\Лабораторная работа №2\Лабораторная работа №2.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+Затраченное время: 00:00:00.48
