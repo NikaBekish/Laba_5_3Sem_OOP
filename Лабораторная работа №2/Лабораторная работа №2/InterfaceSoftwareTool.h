@@ -1,5 +1,7 @@
 #pragma once
 #include"istController.h"
+#include"controlElement.h"
+
 
 class IST
 	:public IstController
@@ -8,25 +10,12 @@ public:
 	IST();
 	~IST();
 
-	void setList();
-	void getList() const;
-
-	void setAdress(void*);
-	/*void getAdress() const;*/
-
-	void getType() const;
+	void setAdress(ControlElement*);
+	ControlElement* getAdress() const;
 
 	static void show();
-	void addList(void *);
+	void addList(ControlElement *);
 
 private:
-	void * adress;
+	ControlElement * adress;
 };
-
-IST::IST()
-{
-}
-
-IST::~IST()
-{
-}

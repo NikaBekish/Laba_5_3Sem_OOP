@@ -6,6 +6,8 @@
 #include"button.h"
 #include"window.h"
 #include"viewer.h"
+#include"InterfaceSoftwareTool.h"
+#include"istController.h"
 
 using namespace std;
 
@@ -14,6 +16,7 @@ void laba4Test();
 
 Figure *Figure::head = NULL;
 ControlElement *ControlElement::head = NULL;
+IstController *IstController::head = NULL;
 
 //Задание 3 лабораторной
 //Определить иерархию и/или композицию классов/объектов (в соответствии с вариантом). Реализовать классы.   
@@ -40,6 +43,11 @@ ControlElement *ControlElement::head = NULL;
 //Создать Интерфейс программного средства. Подсчитать количество тексбоксов, количество интерактивных элементов управления.
 
 
+//									IstController
+//										 |
+//										IST
+//									(ControlElement*)	
+//
 //			 Figure					ControlElement - ControlElementEmp
 //				|									   /			\
 //			Rectangle			                      Button	  TextBox
@@ -51,7 +59,14 @@ ControlElement *ControlElement::head = NULL;
 int main()
 {
 	setlocale(LC_ALL, "Rus");
-
+	Button b1,b2;
+	TextBox t1, t2;
+	IST i1;
+	i1.addList(&b1);
+	i1.addList(&b2);
+	i1.addList(&t1);
+	i1.addList(&t2);
+	IST::show();
 	return 0;
 }
 

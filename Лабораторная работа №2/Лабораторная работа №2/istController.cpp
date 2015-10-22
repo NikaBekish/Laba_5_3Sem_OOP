@@ -10,5 +10,5 @@ IstController::IstController()
 
 IstController::~IstController()
 {
-	cout << "Вызов деконструктора IstController\n";
+	cout << "Вызов деструктора IstController\n";
 }

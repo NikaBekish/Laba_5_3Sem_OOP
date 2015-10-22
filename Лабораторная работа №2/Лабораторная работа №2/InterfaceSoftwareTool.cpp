@@ -1,5 +1,6 @@
 #include<iostream>
 #include"InterfaceSoftwareTool.h"
+#include<typeinfo>
 
 using namespace std;
 //загоняем в список адреса
@@ -7,21 +8,21 @@ using namespace std;
 //посмотреть или можно virtual static в контроллере
 void IST::show()
 {
-	IstController *p = head;
+	IST *p = (IST*)head;
 	cout << "Список: ";
 	while (p)
 	{
-		p->getType();
+		cout << typeid(*(p->getAdress())).name();
 		if (p->next != NULL)
 		{
 			cout << " -> ";
 		}
-		p = p->next;
+		p = (IST*)p->next;
 	}
 	cout << endl;
 }
 
-void IST::addList(void * adr)
+void IST::addList(ControlElement * adr)//ControlElement
 {
 	IST *obj= new IST();
 	obj->setAdress(adr);
@@ -50,17 +51,22 @@ void IST::addList(void * adr)
 	}
 }
 
-void IST::setAdress(void * adr)
+void IST::setAdress(ControlElement * adr)
 {
 	adress = adr;
 }
 
-//void IST::getAdress() const
-//{
-//
-//}
-
-void getType()
+ControlElement* IST::getAdress() const
 {
+	return adress;
+}
 
+IST::IST()
+{
+	cout << "Вызов конструктора IST\n";
+}
+
+IST::~IST()
+{
+	cout << "Вызов деструктора IST\n";
 }
